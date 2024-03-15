@@ -1,0 +1,31 @@
+﻿@model GuestBook.Models.Messages
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Logon</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label"></label>
+                 <input asp-for="Id_User" class="form-control" type="hidden" />
+               
+                <input asp-for="Message" class="form-control" />
+                
+                <span asp-validation-for="Message" class="text-danger" ></span>
+               
+
+            </div>
+           
+
+
+            <div class="form-group">
+                <input type="submit" value="create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h1>Список сообщений</h1>
+<ul>
+    @foreach (var messages in Model)
+    {
+        <li>@messages.User.FirstName написал(а): "@messages.Message" в @messages.MessageDate</li>
+    } 
+</ul>
